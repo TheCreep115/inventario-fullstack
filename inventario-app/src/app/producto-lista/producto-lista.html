@@ -2,7 +2,7 @@
   <div class="container text-center" style="margin: 30px;">
     <h3>Sistemas de Inventarios</h3>
   </div>
-  <table class="table table-striped table-hover aling-middle">
+  <table class="table table-dark table-striped">
     <thead class="table-dark">
       <tr>
         <th scope="col">Id</th>
@@ -12,11 +12,11 @@
       </tr>
     </thead>
   <tbody>
-  <tr *ngFor="let producto of productos">
-    <td>{{producto.idProducto}}</td>
-    <td>{{producto.descripcion}}</td>
-    <td>{{producto.precio}}</td>
-    <td>{{producto.existencia}}</td>
+  <tr *ngFor="let producto of productos; let i = index">
+    <td scope="row">{{producto.idProducto}}</td>
+    <td>{{ producto.descripcion }}</td>
+    <td>{{ producto.precio }}</td>
+    <td>{{ producto.existencia }}</td>
   </tr>
 </tbody>
   </table>
